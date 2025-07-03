@@ -36,15 +36,16 @@ export default function Home() {
               <td className="p-2 border">{log.device_id}</td>
               <td className="p-2 border">{log.fix}</td>
               <td className="p-2 border">{log.status}</td>
-              <td className="p-2 border">{new Date(log.timestamp).toLocaleString('en-IN', {
-  dateStyle: 'medium',
-  timeStyle: 'short',
-})}
-  timeStyle: 'short'
-})
+              <td className="p-2 border">
+                {new Date(log.timestamp).toLocaleString('en-IN', {
+                  dateStyle: 'medium',
+                  timeStyle: 'short',
+                })}
+              </td>
+            </tr>
           ))}
         </tbody>
       </table>
     </div>
-)
+  )
 }
